@@ -1,7 +1,10 @@
+import 'dart:async';
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:third_app/homepage.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -20,21 +23,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  bool value = false;
+  @override
+  void initState() {
+    Timer(Duration (seconds: 10) , (){
+      Navigator.push(context, CupertinoPageRoute(builder: (context) => HomePage()));
+    });
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        setState(() {
-          value=!value;
-        });
-      }),
       body: Container(
         child: FlareActor(
           "animation/Resizing House.flr",
           alignment: Alignment.center,
           fit: BoxFit.cover,
-          animation: value==false?"Demo Mode":"Sun Rotate",
+          animation: "Demo Mode",
         ),
       ),
     );
