@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:third_app/three.dart';
+import 'package:third_app/four.dart';
 
-void main() {
+void main(){
   runApp(MyApp());
 }
 
@@ -20,7 +20,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var name = "Tanvir";
+  var name = "Islam";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,12 +28,7 @@ class _HomeState extends State<Home> {
         body: Center(
           // ignore: deprecated_member_use
           child: RaisedButton(onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Three(
-                          good: name,
-                        )));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Four(well: name,)));
           }),
         ),
       ),
