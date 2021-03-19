@@ -24,10 +24,17 @@ dependencies:
 
   introduction_screen: ^1.0.9
   shared_preferences: ^0.5.8
+  flutter_launcher_icons: ^0.9.0
+
+
 
   flutter:
     sdk: flutter
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/iconz.png"
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -38,6 +45,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -56,6 +64,7 @@ flutter:
     - pictures/bird.jpg
     - pictures/food.jpg
     - pictures/sadbird.jpg
+    - assets/iconz.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
